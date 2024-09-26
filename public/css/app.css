@@ -81,8 +81,8 @@
   --bs-body-line-height: 1.6;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: #f8fafc;
-  --bs-body-bg-rgb: 248, 250, 252;
+  --bs-body-bg: #a4b7c9;
+  --bs-body-bg-rgb: 164, 183, 201;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: rgba(33, 37, 41, 0.75);
@@ -2472,10 +2472,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #a4b7c9, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #a4b7c9, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -11965,4 +11965,25 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.home {
+  background: rgb(245, 146, 196); /* Background color */
+  padding: 20px; /* Padding around the container */
+  margin: 20px; /* Margin around the container */
+  border: 1px solid #ccc; /* Border for the container */
+  border-radius: 5px; /* Rounded corners */
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space out the items */
+  align-items: center; /* Center items vertically */
+}
+
+.links {
+  display: flex; /* Flex for links to align horizontally */
+  gap: 15px; /* Space between links */
+}
+
+h1, .h1 {
+  font-size: 56px; /* Set font size to 56px */
+  color: #333; /* Color of the heading */
+  margin: 0; /* Remove default margin */
 }

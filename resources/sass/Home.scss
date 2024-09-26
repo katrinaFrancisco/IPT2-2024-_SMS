@@ -1,0 +1,21 @@
+.home {
+    background: rgb(245, 146, 196); /* Background color */
+    padding: 20px; /* Padding around the container */
+    margin: 20px; /* Margin around the container */
+    border: 1px solid #ccc; /* Border for the container */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Center items vertically */
+}
+
+.links {
+    display: flex; /* Flex for links to align horizontally */
+    gap: 15px; /* Space between links */
+}
+
+h1 {
+    font-size: 56px; /* Set font size to 56px */
+    color: #333; /* Color of the heading */
+    margin: 0; /* Remove default margin */
+}
