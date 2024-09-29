@@ -1,12 +1,11 @@
 import React from "react";
-import NavList from "./Navlist"; // Fixed import name
+import NavList from "./Navlist";
 
 export default function Home() {
     return (
         <div className="home">
-            <div className="navbar">
-                <NavList />
-            </div>
+            {/* Use the same NavList component as in the About Us page */}
+            <NavList />
 
             <div className="content">
                 <h1>
@@ -16,8 +15,6 @@ export default function Home() {
                     <span>BY ANY MEANS</span>{" "}
                     <span className="highlight">NECESSARY</span>
                 </h1>
-
-               
             </div>
         </div>
     );

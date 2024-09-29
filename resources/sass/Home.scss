@@ -1,6 +1,7 @@
 .home {
     height: 100vh;
-    background-image: url("C:/YAPE/backg1.png");/* Updated image path */
+    background-image: url("C:/ESTRADA/backg1.png");
+
     background-size: cover;
     background-position: center;
     display: flex;
@@ -11,36 +12,50 @@
 }
 
 .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* Keeps the navbar items on the right */
+    background-color: rgba(0, 0, 0, 0.5); /* Default black navbar */
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.transparent-navbar {
+    background-color: transparent; /* Transparent background on the home page */
+}
+
+/* Navbar styling - transparent background */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Keeps navbar items on the right */
+    padding: 20px;
+    background-color: transparent; /* No background color */
+    box-shadow: none; /* Remove any box shadow */
+}
+
+/* NavList styles (links) */
 .nav-list {
     display: flex;
     gap: 20px; /* Space between links */
     padding-right: 40px; /* Adds more padding to the right */
+}
 
-    a {
-        padding: 10px 20px;
-        text-decoration: none;
-        color: #ffffff; /* White text */
-        font-size: 16px;
-        font-weight: bold;
-        font-family: Arial, sans-serif;
-        background-color: transparent;
-        border: none;
-        transition: color 0.3s ease, background-color 0.3s ease;
+/* NavList links */
+.nav-list a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background-color: transparent; /* No background color */
+    border: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
-        &:hover {
-            background-color: rgba(0, 0, 0, 0.2);
-            color: #dcdcdc;
-            border-radius: 4px;
-        }
-    }
+/* Hover effect for links */
+.nav-list a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Slight dark hover background */
+    color: #dcdcdc; /* Light hover color */
+    border-radius: 4px;
 }
 
 .content {
@@ -68,8 +83,6 @@
             color: #ff6b00; /* For 'EDUCATION' and 'NECESSARY' */
         }
     }
-
-   
 }
 
 /* Text animation keyframes */
