@@ -1,21 +1,113 @@
 .home {
-    background: rgb(245, 146, 196); /* Background color */
-    padding: 20px; /* Padding around the container */
-    margin: 20px; /* Margin around the container */
-    border: 1px solid #ccc; /* Border for the container */
-    border-radius: 5px; /* Rounded corners */
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space out the items */
-    align-items: center; /* Center items vertically */
+    height: 100vh;
+    background-image: url("C:/ESTRADA/backg1.png");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns content to the left */
+    color: #333;
 }
 
-.links {
-    display: flex; /* Flex for links to align horizontally */
-    gap: 15px; /* Space between links */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Keeps the navbar items on the right */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 56px; /* Set font size to 56px */
-    color: #333; /* Color of the heading */
-    margin: 0; /* Remove default margin */
+.nav-list {
+    display: flex;
+    gap: 20px; /* Space between links */
+    padding-right: 40px; /* Adds more padding to the right */
+
+    a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #ffffff; /* White text */
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        background-color: transparent;
+        border: none;
+        transition: color 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #dcdcdc;
+            border-radius: 4px;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: center;
+    flex: 1;
+    padding-left: 50px; /* Add padding from the left to position text nicely */
+
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: left; /* Align the text to the left */
+        font-family: Arial, sans-serif; /* Match the font style */
+        display: inline-block;
+        animation: moveText 3s linear infinite; /* Add animation to the text */
+
+        span {
+            color: black; /* For 'QUALITY' and 'BY ANY MEANS' */
+        }
+
+        .highlight {
+            color: #ff6b00; /* For 'EDUCATION' and 'NECESSARY' */
+        }
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        text-align: left; /* Align to the left */
+    }
+
+    .more-btn {
+        background-color: #ff6b00;
+        color: white;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        text-transform: uppercase;
+        animation: moveButton 1.5s ease-in-out infinite alternate;
+    }
+}
+
+/* Text animation keyframes */
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Button moving animation */
+@keyframes moveButton {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
 }

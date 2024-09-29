@@ -1,13 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import NavList from "./Navlist"; // Reuse NavList component
 
 export default function Home() {
     return (
-        <div className="home"> 
-            <Link to="/">Home</Link> <br />
-            <Link to="/about-us">About Us</Link> <br />
-            <Link to="/contact-us">Contact Us</Link>
-            <h1>HOME</h1>
+        <div className="home">
+            <div className="navbar">
+                <NavList />
+            </div>
+
+            <div className="content">
+                <h1>
+                    <span>QUALITY</span>{" "}
+                    <span className="highlight">EDUCATION</span>
+                    <br />
+                    <span>BY ANY MEANS</span>{" "}
+                    <span className="highlight">NECESSARY</span>
+                </h1>
+
+                <div className="more-btn">More</div>
+            </div>
         </div>
     );
 }
