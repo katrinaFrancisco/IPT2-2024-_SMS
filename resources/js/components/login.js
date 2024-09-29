@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import NavList from "./Navlist";
-// Import FontAwesome for the eye icon (or use another method to include icons)
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 export default function Login() {
     const [username, setUsername] = useState("");
@@ -52,9 +52,8 @@ export default function Login() {
                                 role="button"
                                 tabIndex={0}
                                 onKeyDown={(e) =>
-                                    e.key === "Enter" &&
-                                    setShowPassword(!showPassword)
-                                } // Accessibility: toggle on Enter key
+                                    e.key === "Enter" && setShowPassword(!showPassword)
+                                }
                             >
                                 <FontAwesomeIcon
                                     icon={showPassword ? faEyeSlash : faEye}
@@ -66,6 +65,10 @@ export default function Login() {
                             Login
                         </button>
                     </form>
+                    <div className="signup-link">
+                        <span>Don't have an account? </span>
+                        <Link to="/signup">Sign Up</Link>
+                    </div>
                 </div>
             </div>
         </div>

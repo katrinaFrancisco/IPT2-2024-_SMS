@@ -1,5 +1,5 @@
 import React from "react";
-import NavList from "./Navlist"; // Reuse NavList component
+import NavList from "./Navlist"; // Fixed import name
 
 export default function Home() {
     return (
@@ -17,7 +17,7 @@ export default function Home() {
                     <span className="highlight">NECESSARY</span>
                 </h1>
 
-                <div className="more-btn">More</div>
+               
             </div>
         </div>
     );
