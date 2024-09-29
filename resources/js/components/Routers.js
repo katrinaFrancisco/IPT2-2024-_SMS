@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
-import Login from "./login"; // Import the Login component
+import Login from "./login";
+import SignUp from "./SignUp";
+import Dashboard from "./Dashboard"; // Import the Dashboard component
 
 export default function Routers() {
     return (
@@ -14,7 +16,9 @@ export default function Routers() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/contact-us" element={<ContactUs />} />
-                <Route path="/login" element={<Login />} /> {/* New route */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/dashboard" element={<Dashboard />} /> {/* Add route for Dashboard */}
             </Routes>
         </Router>
     );

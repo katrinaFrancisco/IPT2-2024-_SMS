@@ -7,18 +7,16 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
-//Home
-@import "./Home.scss";
+@import "Home.scss";
 
-//Login
-//@import './Login.scss';
+@import "Login.scss";
+
+@import "SignUp.scss";
+
+@import "Dashboard.scss";
 
 //AboutUs
 @import "./AboutUs.scss";
-// Login
-@import "./Login.scss";
 
 //ContactUs
 @import "./ContactUs.scss";
-
-//@import "./AboutUs.scss";

@@ -1,5 +1,5 @@
 import React from "react";
-import NavList from "./Navlist"; 
+import NavList from "./Navlist";
 
 export default function Home() {
     return (
@@ -15,8 +15,6 @@ export default function Home() {
                     <span>BY ANY MEANS</span>{" "}
                     <span className="highlight">NECESSARY</span>
                 </h1>
-
-                <div className="more-btn">More</div>
             </div>
         </div>
     );

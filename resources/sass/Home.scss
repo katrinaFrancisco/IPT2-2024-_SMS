@@ -83,24 +83,6 @@
             color: #ff6b00; /* For 'EDUCATION' and 'NECESSARY' */
         }
     }
-
-    p {
-        font-size: 18px;
-        margin-bottom: 40px;
-        text-align: left; /* Align to the left */
-    }
-
-    .more-btn {
-        background-color: #ff6b00;
-        color: white;
-        padding: 10px 20px;
-        font-weight: bold;
-        font-size: 18px;
-        border-radius: 8px;
-        cursor: pointer;
-        text-transform: uppercase;
-        animation: moveButton 1.5s ease-in-out infinite alternate;
-    }
 }
 
 /* Text animation keyframes */
