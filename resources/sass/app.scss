@@ -1,13 +1,17 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import "variables";
+@import 'variables';
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
-// Home
-@import "./Home.scss";
+//Home
+@import './Home.scss';
 
-@import "./Login.scss";
+//Login
+//@import './Login.scss';
+
+//AboutUs
+@import './AboutUs.scss';

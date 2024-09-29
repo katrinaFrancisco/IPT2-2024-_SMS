@@ -1,13 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function NavList() {
-    return (
-        <div className="nav-list">
-            <Link to="/">Home</Link> <br />
-            <Link to="/about-us">About Us</Link> <br />
-            <Link to="/contact-us">Contact Us</Link> <br />
-            <Link to="/login">Login</Link> {/* New link to Login page */}
-        </div>
-    );
+  const location = useLocation(); // Get the current route
+
+  return (
+    <nav className="navbar">
+      <div className="nav-list">
+        {/* Conditionally render the links based on the current path */}
+        {location.pathname !== "/" && <Link to="/">Home</Link>}
+        {location.pathname !== "/about-us" && <Link to="/about-us">About Us</Link>}
+        {location.pathname !== "/contact-us" && <Link to="/contact-us">Contact Us</Link>}
+        {location.pathname !== "/login" && <Link to="/login">Login</Link>}
+      </div>
+    </nav>
+  );
 }

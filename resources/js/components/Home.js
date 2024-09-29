@@ -1,12 +1,11 @@
 import React from "react";
-import NavList from "./Navlist"; // Reuse NavList component
+import NavList from "./Navlist"; 
 
 export default function Home() {
     return (
         <div className="home">
-            <div className="navbar">
-                <NavList />
-            </div>
+            {/* Use the same NavList component as in the About Us page */}
+            <NavList />
 
             <div className="content">
                 <h1>
