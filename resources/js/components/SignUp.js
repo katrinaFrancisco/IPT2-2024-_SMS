@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavList from "./Navlist";
+import NavList from "./Navlist"; // Ensure this import is present
 import { Link } from "react-router-dom"; // Import Link for navigation
 
 export default function SignUp() {
@@ -12,34 +12,28 @@ export default function SignUp() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (
-            !firstName ||
-            !lastName ||
-            !email ||
-            !password ||
-            !confirmPassword
-        ) {
+
+        if (!firstName || !lastName || !email || !password || !confirmPassword) {
             setError("Please fill in all fields");
             return;
         }
+
         if (password !== confirmPassword) {
             setError("Passwords do not match");
             return;
         }
+
         console.log("Signing up:", { firstName, lastName, email, password });
         setError("");
     };
 
     return (
         <div className="signup">
-            <div className="navbar">
-                <NavList />
-            </div>
+            <NavList /> {/* Navbar integrated here */}
             <div className="signup-container">
                 <div className="form-card">
                     <h2 className="form-title">SIGN UP FORM</h2>
                     <form onSubmit={handleSubmit}>
-                        {/* Form fields */}
                         <div className="input-group">
                             <input
                                 type="text"
@@ -80,9 +74,7 @@ export default function SignUp() {
                             <input
                                 type="password"
                                 value={confirmPassword}
-                                onChange={(e) =>
-                                    setConfirmPassword(e.target.value)
-                                }
+                                onChange={(e) => setConfirmPassword(e.target.value)}
                                 placeholder="Confirm Password"
                                 required
                             />
@@ -94,8 +86,7 @@ export default function SignUp() {
                     </form>
                     <div className="login-link">
                         <span>Already have an account? </span>
-                        <Link to="/login">Login</Link>{" "}
-                        {/* Link to login page */}
+                        <Link to="/login">Login</Link>
                     </div>
                 </div>
             </div>

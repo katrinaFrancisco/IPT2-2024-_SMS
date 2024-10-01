@@ -1,7 +1,7 @@
+/* Home Page Styling */
 .home {
     height: 100vh;
-    background-image: url("C:/ESTRADA/backg1.png");
-
+    background-image: url("C:/YAPES/backg1.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -11,31 +11,24 @@
     color: #333;
 }
 
+/* Navbar styling */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.5); /* Default black navbar */
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.transparent-navbar {
-    background-color: transparent; /* Transparent background on the home page */
-}
-
-/* Navbar styling - transparent background */
-.navbar {
-    width: 100%;
+    width: 100%; /* Full width */
+    position: absolute; /* Fixed to the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
     display: flex;
-    justify-content: flex-end; /* Keeps navbar items on the right */
-    padding: 20px;
-    background-color: transparent; /* No background color */
-    box-shadow: none; /* Remove any box shadow */
+    justify-content: flex-end; /* Keep nav items on the right */
+    padding: 20px 40px; /* Padding for spacing */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    z-index: 1000; /* Stay above other elements */
 }
 
-/* NavList styles (links) */
+/* NavList styling (links) */
 .nav-list {
     display: flex;
     gap: 20px; /* Space between links */
-    padding-right: 40px; /* Adds more padding to the right */
 }
 
 /* NavList links */
@@ -45,19 +38,20 @@
     color: #ffffff; /* White text */
     font-size: 16px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
-    background-color: transparent; /* No background color */
+    font-family: "Times New Roman", Times, serif; /* Formal font */
+    background-color: transparent; /* No background */
     border: none;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hover effect for links */
 .nav-list a:hover {
-    background-color: rgba(0, 0, 0, 0.2); /* Slight dark hover background */
+    background-color: rgba(0, 0, 0, 0.2); /* Dark hover background */
     color: #dcdcdc; /* Light hover color */
     border-radius: 4px;
 }
 
+/* Content styling */
 .content {
     display: flex;
     flex-direction: column;

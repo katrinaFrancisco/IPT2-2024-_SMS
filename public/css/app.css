@@ -11966,9 +11966,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* Home Page Styling */
 .home {
   height: 100vh;
-  background-image: url(/images/backg1.png?5850ae57a2a6f488e3b0c5f8d3413a90); /* Updated image path */
+  background-image: url(/images/backg1.png?5850ae57a2a6f488e3b0c5f8d3413a90);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -11978,31 +11979,24 @@ textarea.form-control-lg {
   color: #333;
 }
 
+/* Navbar styling */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.5); /* Default black navbar */
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.transparent-navbar {
-  background-color: transparent; /* Transparent background on the home page */
-}
-
-/* Navbar styling - transparent background */
-.navbar {
-  width: 100%;
+  width: 100%; /* Full width */
+  position: absolute; /* Fixed to the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
   display: flex;
-  justify-content: flex-end; /* Keeps navbar items on the right */
-  padding: 20px;
-  background-color: transparent; /* No background color */
-  box-shadow: none; /* Remove any box shadow */
+  justify-content: flex-end; /* Keep nav items on the right */
+  padding: 20px 40px; /* Padding for spacing */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  z-index: 1000; /* Stay above other elements */
 }
 
-/* NavList styles (links) */
+/* NavList styling (links) */
 .nav-list {
   display: flex;
   gap: 20px; /* Space between links */
-  padding-right: 40px; /* Adds more padding to the right */
 }
 
 /* NavList links */
@@ -12012,19 +12006,20 @@ textarea.form-control-lg {
   color: #ffffff; /* White text */
   font-size: 16px;
   font-weight: bold;
-  font-family: Arial, sans-serif;
-  background-color: transparent; /* No background color */
+  font-family: "Times New Roman", Times, serif; /* Formal font */
+  background-color: transparent; /* No background */
   border: none;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hover effect for links */
 .nav-list a:hover {
-  background-color: rgba(0, 0, 0, 0.2); /* Slight dark hover background */
+  background-color: rgba(0, 0, 0, 0.2); /* Dark hover background */
   color: #dcdcdc; /* Light hover color */
   border-radius: 4px;
 }
 
+/* Content styling */
 .content {
   display: flex;
   flex-direction: column;
@@ -12072,7 +12067,7 @@ textarea.form-control-lg {
 }
 .about-us-page {
   height: 100vh;
-  background-image: url(/images/backg2.png?6b2bcc0fb46850414ffdf200754ca29e);
+  background-image: url(/images/backg2.png?6b2bcc0fb46850414ffdf200754ca29e); /* Update the background image path */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12202,107 +12197,107 @@ textarea.form-control-lg {
     transform: translateX(0);
   }
 }
-
 body {
-  font-family: "Times New Roman", Times, serif; /* Formal font style */
+  font-family: "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
 }
 
 .ContactUs {
-  position: fixed; /* Fix the section to the viewport */
-  top: 0; /* Align to the top of the viewport */
-  left: 0; /* Align to the left of the viewport */
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  background-image: url(/images/ContactUs.png?6f081fcec60397cbb39442984733d024); /* Ensure the correct path */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/images/ContactUs.png?6f081fcec60397cbb39442984733d024);
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
+  justify-content: center;
   align-items: center;
   padding: 40px;
-  z-index: 999; /* Keep it above other content */
+  padding-top: 80px; /* Space for the navbar to avoid overlap */
+  z-index: 999;
 }
 
 .ContactUs section {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white box */
-  border-radius: 10px; /* More pronounced rounding */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis */
-  padding: 40px; /* Bigger padding for more content space */
-  width: 90%; /* Increased width to take more horizontal space */
-  max-width: 1500px; /* Maximum width now allows the section to expand more */
-  height: auto; /* Adjust the height of the section */
-  max-height: 600px; /* Optional: Set a maximum height for the section */
-  overflow-y: auto; /* Allow scrolling if content exceeds max height */
-  transition: all 0.3s ease; /* Smooth animations on resize */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 90%;
+  max-width: 1500px;
+  height: auto;
+  max-height: 600px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
 }
 
 .ContactUs h1, .ContactUs .h1 {
   text-align: center;
   margin-top: 2px;
-  font-size: 50px; /* Title size */
-  color: #000000; /* Title color */
-  font-weight: bold; /* Title weight */
-  margin-bottom: 20px; /* Space below title */
+  font-size: 50px;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .ContactUs h2, .ContactUs .h2 {
   text-align: left;
   margin-top: 2px;
-  font-size: 25px; /* Title size */
-  color: #000000; /* Title color */
-  font-weight: bold; /* Title weight */
-  margin-bottom: 10px; /* Space below title */
+  font-size: 25px;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .ContactUs h3, .ContactUs .h3 {
   text-align: left;
-  font-size: 1.5rem; /* Increased size for better visibility */
+  font-size: 1.5rem;
   margin-top: 20px;
   margin-bottom: 0px;
 }
 
 .ContactUs p {
   text-align: left;
-  font-size: 1.2rem; /* Slightly larger text for readability */
-  line-height: 1.6; /* Improve line spacing */
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .ContactUs a {
   text-align: left;
-  color: #000000; /* Bootstrap primary color */
+  color: #000000;
   text-decoration: none;
-  font-weight: bold; /* Bold links to make them stand out */
+  font-weight: bold;
 }
 
-/* Navbar styling integrated from previous design */
+/* Navbar styling */
 .navbar {
-  width: 100%; /* Ensure it takes the full width */
-  position: absolute; /* Keep it at the top */
-  top: 0; /* Align to the top of the page */
-  left: 0; /* Align to the left of the page */
+  width: 100%;
+  position: fixed; /* Stick to the top */
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: flex-end; /* Keeps the navbar items on the right */
-  padding: 20px 40px; /* Padding on the right and left */
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  justify-content: flex-end;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensure it stays above other content */
+  z-index: 1000; /* Ensure it stays above the content */
 }
 
 .nav-list {
   display: flex;
-  gap: 20px; /* Space between links */
+  gap: 20px;
 }
 
 .nav-list a {
   padding: 10px 20px;
   text-decoration: none;
-  color: #ffffff; /* White text */
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  font-family: "Times New Roman", Times, serif; /* Formal font for links */
+  font-family: "Times New Roman", Times, serif;
   background-color: transparent;
   border: none;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -12316,202 +12311,127 @@ body {
 
 /* Stats Section styling */
 .stats-section {
-  display: flex; /* Use Flexbox to layout items */
-  justify-content: space-around; /* Space evenly around items */
+  display: flex;
+  justify-content: space-around;
   margin-top: 40px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 .stat-item {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-  padding: 20px; /* Inner padding for content */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for elevation */
-  margin: 10px; /* Margin for spacing between items */
-  flex: 1 1 200px; /* Flexible growth with a minimum width */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  max-width: 300px; /* Optional: set a maximum width for each stat item */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  flex: 1 1 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
 }
 
 .stat-item:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .stat-item h3, .stat-item .h3 {
-  font-size: 25px; /* Title size */
-  color: #000000; /* Title color */
-  font-weight: bold; /* Title weight */
-  margin-bottom: 20px; /* Space below title */
-}
-
-.stat-item p {
-  font-size: 20px; /* Description text size */
-  color: #333; /* Description text color */
-}
-
-.signup-link {
-  margin-top: 20px;
-  font-size: 14px;
-}
-.signup-link a {
-  color: #3498db;
-  text-decoration: none;
-}
-.signup-link a:hover {
-  text-decoration: underline;
-}
-
-.signup {
-  height: 100vh;
-  background-image: url(/images/SignUpBackground.jpg?2a574e151d66182a7e22649bda27849d);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #333;
-}
-.signup .navbar {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.signup .signup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-.signup .form-card {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  text-align: center;
-}
-.signup .form-card .form-title {
-  font-size: 26px;
+  font-size: 25px;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 20px;
 }
-.signup .form-card form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.signup .form-card .input-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: left;
-}
-.signup .form-card input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-.signup .form-card .signup-button {
-  padding: 10px;
-  background-color: #ff8b07;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-.signup .form-card .signup-button:hover {
-  background-color: #2980b9;
-}
-.signup .form-card .error-message {
-  color: red;
-  margin-top: 10px;
-  font-size: 14px;
+
+.stat-item p {
+  font-size: 20px;
+  color: #333;
 }
 
-.signup {
+.login {
   height: 100vh;
-  background-image: url(/images/SignUpBackground.jpg?2a574e151d66182a7e22649bda27849d);
+  background-color: #f5f5f5;
+  background-image: url(/images/login.png?dc51c2191cd240011796395d1bc3d889);
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  color: #333;
 }
-.signup .navbar {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
+.login .login-container {
   display: flex;
-  justify-content: flex-end;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.signup .signup-container {
+.login .form-card {
+  background-color: white;
+  display: flex;
+  width: 850px;
+  height: 450px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.login .form-card .left-section {
+  background-color: #FF8A00;
+  color: white;
+  width: 55%; /* Make the left section bigger */
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  width: 100%;
+  padding: 40px;
 }
-.signup .form-card {
-  width: 100%;
-  padding: 30px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-.signup .form-title {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-.signup .input-group {
-  margin-bottom: 15px;
+.login .form-card .right-section {
+  width: 45%; /* Adjust to make the right section smaller */
+  padding: 40px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.signup .input-group input {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 0.3s ease;
+.login .form-card .right-section .form-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
-.signup .input-group input:focus {
-  border-color: #007bff;
-  outline: none;
+.login .form-card .right-section .input-group {
+  margin-bottom: 20px;
 }
-.signup .error-message {
-  color: red;
-  text-align: center;
-  margin-bottom: 15px;
-}
-.signup .signup-button {
+.login .form-card .right-section .input-group input {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.login .form-card .right-section .password-group {
+  position: relative;
+}
+.login .form-card .right-section .password-group .eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #3498db;
+}
+.login .form-card .right-section .error-message {
+  color: red;
+  margin-top: 10px;
+}
+.login .form-card .right-section .login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
   color: white;
   border: none;
   border-radius: 4px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-.signup .signup-button:hover {
-  background-color: #0056b3;
+.login .form-card .right-section .signup-link {
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 .dashboard {

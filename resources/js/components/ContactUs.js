@@ -1,15 +1,10 @@
 import React from "react";
-import NavList from "./Navlist";
+import NavList from "./Navlist"; // Same NavList component for consistent navigation
 
 export default function ContactUs() {
     return (
         <div className="ContactUs">
-            {/* Navigation Bar Component */}
-            <div className="navbar">
-                <NavList />
-            </div>
-
-            {/* Contact Information Section */}
+            <NavList /> {/* Navigation component */}
             <section className="contact-info">
                 <h1>Contact Us</h1>
                 <h2>Get in Touch!</h2>
@@ -19,15 +14,11 @@ export default function ContactUs() {
                     have. Your thoughts are important to us, and we look forward
                     to assisting you.
                 </p>
-
-                {/* Stats Section */}
                 <div className="stats-section">
                     <div className="stat-item">
                         <h3>Email:</h3>
                         <p>
-                            <a href="mailto:info@ourschool.edu">
-                                xxx@school.edu
-                            </a>
+                            <a href="mailto:info@ourschool.edu">xxx@school.edu</a>
                         </p>
                     </div>
                     <div className="stat-item">

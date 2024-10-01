@@ -16,58 +16,73 @@ export default function Login() {
             setError("Please fill in all fields");
             return;
         }
+        // Here you would typically handle login logic, e.g., API call
         console.log("Logging in:", { username, password });
+        // Clear fields after submission
+        setUsername("");
+        setPassword("");
         setError("");
     };
 
     return (
         <div className="login">
-            <div className="navbar">
-                <NavList />
-            </div>
+            <NavList /> {/* Navbar integrated here */}
             <div className="login-container">
                 <div className="form-card">
-                    <h2 className="form-title">LOGIN FORM</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="input-group">
-                            <input
-                                type="text"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                placeholder="Username"
-                                required
-                            />
-                        </div>
-                        <div className="input-group password-group">
-                            <input
-                                type={showPassword ? "text" : "password"}
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Password"
-                                required
-                            />
-                            <span
-                                className="eye-icon"
-                                onClick={() => setShowPassword(!showPassword)}
-                                role="button"
-                                tabIndex={0}
-                                onKeyDown={(e) =>
-                                    e.key === "Enter" && setShowPassword(!showPassword)
-                                }
-                            >
-                                <FontAwesomeIcon
-                                    icon={showPassword ? faEyeSlash : faEye}
+                    <div className="left-section">
+                        {/* Left section can be used for branding or a welcome message */}
+                    </div>
+
+                    <div className="right-section">
+                        <h2 className="form-title">Login to your account</h2>
+                        <form onSubmit={handleSubmit}>
+                            <div className="input-group">
+                                <input
+                                    type="text"
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    placeholder="Username"
+                                    required
+                                    aria-label="Username" // Accessibility
                                 />
-                            </span>
+                            </div>
+                            <div className="input-group password-group">
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="Password"
+                                    required
+                                    aria-label="Password" // Accessibility
+                                />
+                                <span
+                                    className="eye-icon"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    role="button"
+                                    tabIndex={0}
+                                    onKeyDown={(e) =>
+                                        e.key === "Enter" && setShowPassword(!showPassword)
+                                    }
+                                    aria-label={showPassword ? "Hide password" : "Show password"} // Accessibility
+                                    title={showPassword ? "Hide password" : "Show password"} // Tooltip for better UX
+                                >
+                                    <FontAwesomeIcon
+                                        icon={showPassword ? faEyeSlash : faEye}
+                                    />
+                                </span>
+                            </div>
+
+                            {error && <div className="error-message">{error}</div>}
+
+                            <button type="submit" className="login-button">
+                                Login 
+                            </button>
+                        </form>
+
+                        <div className="signup-link">
+                            <span>Don't have an account? </span>
+                            <Link to="/signup">Sign Up Free!</Link> {/* Link to Signup */}
                         </div>
-                        {error && <div className="error-message">{error}</div>}
-                        <button type="submit" className="login-button">
-                            Login
-                        </button>
-                    </form>
-                    <div className="signup-link">
-                        <span>Don't have an account? </span>
-                        <Link to="/signup">Sign Up</Link>
                     </div>
                 </div>
             </div>
