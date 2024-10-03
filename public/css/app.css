@@ -12440,7 +12440,7 @@ body {
 }
 .dashboard .sidebar {
   width: 250px;
-  background-color: #ff9c08; /* Yellow sidebar */
+  background-color: #ff9c08;
   padding: 20px;
   position: fixed; /* Fix the sidebar in place */
   height: 100vh; /* Full height of the viewport */
@@ -12456,10 +12456,10 @@ body {
   color: #ffffff;
 }
 .dashboard .sidebar .divider {
-  width: 109%;
+  width: 300%; /* Set to a percentage less than 100% for spacing */
   height: 1px;
   background-color: #ffffff;
-  margin: 50px 0; /* Increased top margin to move it lower */
+  margin: 70px auto; /* Centers the divider horizontally */
 }
 .dashboard .sidebar .sidebar-links {
   display: flex;
@@ -12527,4 +12527,63 @@ body {
 .dashboard .dashboard-content .dashboard-actions .action-item p {
   color: #333;
   font-size: 1rem;
+}
+
+.signup {
+  height: 100vh;
+  background: url(/images/Sad.jpg?2a574e151d66182a7e22649bda27849d) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup .signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+.signup .signup-container .form-card {
+  text-align: center;
+}
+.signup .signup-container .form-card .form-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.signup .signup-container .form-card .input-group {
+  margin-bottom: 15px;
+}
+.signup .signup-container .form-card .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.signup .signup-container .form-card .signup-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.signup .signup-container .form-card .signup-button:hover {
+  background-color: #0056b3;
+}
+.signup .signup-container .form-card .error-message {
+  color: red;
+  margin-bottom: 15px;
+}
+.signup .signup-container .form-card .login-link {
+  margin-top: 15px;
+}
+.signup .signup-container .form-card .login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+.signup .signup-container .form-card .login-link a:hover {
+  text-decoration: underline;
 }

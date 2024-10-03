@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import NavList from "./Navlist"; // Ensure this import is present
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
     const [firstName, setFirstName] = useState("");
@@ -24,12 +23,18 @@ export default function SignUp() {
         }
 
         console.log("Signing up:", { firstName, lastName, email, password });
-        setError("");
+
+        // Clear fields after successful sign-up
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        setError("");  // Clear error after successful submission
     };
 
     return (
         <div className="signup">
-            <NavList /> {/* Navbar integrated here */}
             <div className="signup-container">
                 <div className="form-card">
                     <h2 className="form-title">SIGN UP FORM</h2>

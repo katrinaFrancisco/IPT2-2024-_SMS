@@ -1,71 +1,35 @@
 .signup {
     height: 100vh;
-    background-image: url("C:/YAPES/SignUpBackground.jpg"); // Updated path
-    background-size: cover;
-    background-position: center;
+    background: url('C:/uryel/Sad.jpg') center/cover no-repeat;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    color: #333;
-
-    .navbar {
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        display: flex;
-        justify-content: flex-end;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
 
     .signup-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         background-color: rgba(255, 255, 255, 0.9);
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        max-width: 500px;
-        width: 100%;
+        width: 400px;
 
         .form-card {
-            width: 100%;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
 
             .form-title {
-                text-align: center;
-                font-size: 1.5rem;
                 margin-bottom: 20px;
+                font-size: 1.5rem;
             }
 
             .input-group {
                 margin-bottom: 15px;
-                display: flex;
-                flex-direction: column;
 
                 input {
+                    width: 100%;
                     padding: 10px;
-                    font-size: 1rem;
                     border: 1px solid #ccc;
                     border-radius: 4px;
-                    transition: border-color 0.3s ease;
-
-                    &:focus {
-                        border-color: #007bff;
-                        outline: none;
-                    }
+                    font-size: 1rem;
                 }
-            }
-
-            .error-message {
-                color: red;
-                text-align: center;
-                margin-bottom: 15px;
             }
 
             .signup-button {
@@ -76,20 +40,29 @@
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
-                transition: background-color 0.3s ease;
+                margin-top: 15px;
 
                 &:hover {
                     background-color: #0056b3;
                 }
             }
-        }
 
-        .login-link {
-            margin-top: 15px;
-            text-align: center;
+            .error-message {
+                color: red;
+                margin-bottom: 15px;
+            }
 
-            span {
-                margin-right: 5px;
+            .login-link {
+                margin-top: 15px;
+
+                a {
+                    color: #007bff;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }

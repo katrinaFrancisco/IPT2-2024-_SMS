@@ -4,7 +4,7 @@
 
     .sidebar {
         width: 250px;
-        background-color: #ff9c08; /* Yellow sidebar */
+        background-color: #ff9c08; 
         padding: 20px;
         position: fixed; /* Fix the sidebar in place */
         height: 100vh; /* Full height of the viewport */
@@ -19,12 +19,12 @@
         }
 
         .divider {
-            width: 109%;
+            width: 300%; /* Set to a percentage less than 100% for spacing */
             height: 1px;
             background-color: #ffffff;
-            margin: 50px 0; /* Increased top margin to move it lower */
+            margin: 70px auto; /* Centers the divider horizontally */
         }
-
+        
         /* Sidebar links */
         .sidebar-links {
             display: flex;
