@@ -12698,3 +12698,157 @@ body {
   font-size: 1.2rem;
   color: #777;
 }
+
+.student-list {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #333; /* Same background as the dashboard */
+}
+.student-list .sidebar {
+  width: 250px;
+  background-color: #ff9c08; /* Same as the dashboard sidebar */
+  padding: 20px 0;
+  position: fixed; /* Fix the sidebar in place */
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.student-list .sidebar .sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.student-list .sidebar .sidebar-header .sidebar-logo {
+  width: 280px; /* Match the logo size with the dashboard */
+  height: auto;
+  margin-bottom: 10px;
+}
+.student-list .sidebar .divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 20px auto;
+}
+.student-list .sidebar .sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.student-list .sidebar .sidebar-links .sidebar-link {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.student-list .sidebar .sidebar-links .sidebar-link:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Same hover effect */
+}
+.student-list .sidebar .sidebar-links .sidebar-link.active {
+  background-color: rgba(0, 0, 0, 0.3); /* Active state */
+}
+.student-list .sidebar .sidebar-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+.student-list .sidebar .sidebar-footer .settings-link {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.student-list .sidebar .sidebar-footer .settings-link:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.student-list .student-list-content {
+  margin-left: 250px; /* Same margin as in the dashboard */
+  padding: 40px;
+  flex-grow: 1;
+  background-color: #f4f4f4; /* Light background similar to dashboard content */
+  color: #333;
+}
+.student-list .student-list-content .welcome-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+.student-list .student-list-content .welcome-metric .welcome-text {
+  flex: 1;
+  text-align: center;
+}
+.student-list .student-list-content .welcome-metric .welcome-text h2, .student-list .student-list-content .welcome-metric .welcome-text .h2 {
+  font-size: 2rem;
+  color: #14005e;
+  margin-bottom: 10px;
+}
+.student-list .student-list-content .welcome-metric .welcome-text p {
+  font-size: 1.2rem;
+  color: #777;
+}
+.student-list .student-list-content .student-table {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.student-list .student-list-content .student-table .student-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.student-list .student-list-content .student-table .student-table-header .add-student-btn {
+  background-color: #344955;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.student-list .student-list-content .student-table .student-table-header .add-student-btn:hover {
+  background-color: #f9aa33;
+}
+.student-list .student-list-content .student-table .student-table-header .search-bar {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.student-list .student-list-content .student-table .student-table-main {
+  width: 100%;
+  border-collapse: collapse;
+}
+.student-list .student-list-content .student-table .student-table-main th,
+.student-list .student-list-content .student-table .student-table-main td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.student-list .student-list-content .student-table .student-table-main th {
+  background-color: #f9aa33; /* Similar accent color */
+  color: white;
+  font-size: 1.2rem;
+}
+.student-list .student-list-content .student-table .student-table-main td {
+  font-size: 1rem;
+  color: #333;
+}
+.student-list .student-list-content .student-table .student-table-main tr:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}

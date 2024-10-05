@@ -8,6 +8,7 @@ import ContactUs from "./ContactUs";
 import Login from "./login";
 import SignUp from "./SignUp";
 import Dashboard from "./Dashboard"; // Import the Dashboard component
+import StudentList from "./StudentList"; // Import the StudentList component
 
 export default function Routers() {
     return (
@@ -18,7 +19,10 @@ export default function Routers() {
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/dashboard" element={<Dashboard />} /> {/* Add route for Dashboard */}
+                <Route path="/dashboard" element={<Dashboard />} />{" "}
+                {/* Dashboard route */}
+                <Route path="/students" element={<StudentList />} />{" "}
+                {/* Add route for StudentList */}
             </Routes>
         </Router>
     );
