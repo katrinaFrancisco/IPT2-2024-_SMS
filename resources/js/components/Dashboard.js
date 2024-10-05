@@ -25,7 +25,13 @@ export default function Dashboard() {
                         Profile
                     </a>
                     <a href="#" className="sidebar-link">
-                        Teacher
+                        Teachers
+                    </a>
+                    <a href="#" className="sidebar-link">
+                        Students
+                    </a>
+                    <a href="#" className="sidebar-link">
+                        Courses
                     </a>
                 </div>
 
