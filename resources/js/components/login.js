@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 // Import your logo image
-import logo from "C:/Ucjy/NOBG.png";
+import logo from "C:/SMS/NOBG.png";
 
 export default function Login() {
     const [username, setUsername] = useState("");

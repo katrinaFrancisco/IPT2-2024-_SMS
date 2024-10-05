@@ -1,5 +1,5 @@
-import logo from "C:/Ucjy/NOBG.png";
-import avatar from "C:/Ucjy/jj.png"; // Import the avatar image
+import logo from "C:/SMS/NOBG.png";
+import avatar from "C:/SMS/jj.png"; // Import the avatar image
 
 export default function Dashboard() {
     return (
@@ -25,7 +25,16 @@ export default function Dashboard() {
                         Profile
                     </a>
                     <a href="#" className="sidebar-link">
-                        Teacher
+                        Teachers
+                    </a>
+                    <a href="#" className="sidebar-link">
+                        Students
+                    </a>
+                    <a href="#" className="sidebar-link">
+                        Courses
+                    </a>
+                    <a href="#" className="sidebar-link">
+                        Reports
                     </a>
                 </div>
 

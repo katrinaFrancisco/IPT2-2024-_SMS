@@ -8752,8 +8752,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Dashboard)
 /* harmony export */ });
-/* harmony import */ var C_Ucjy_NOBG_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NOBG.png */ "./NOBG.png");
-/* harmony import */ var C_Ucjy_jj_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jj.png */ "./jj.png");
+/* harmony import */ var C_SMS_NOBG_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NOBG.png */ "./NOBG.png");
+/* harmony import */ var C_SMS_jj_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jj.png */ "./jj.png");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
  // Import the avatar image
@@ -8766,7 +8766,7 @@ function Dashboard() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "sidebar-header",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-          src: C_Ucjy_NOBG_png__WEBPACK_IMPORTED_MODULE_0__["default"],
+          src: C_SMS_NOBG_png__WEBPACK_IMPORTED_MODULE_0__["default"],
           alt: "School Logo",
           className: "sidebar-logo"
         })
@@ -8785,7 +8785,19 @@ function Dashboard() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
           href: "#",
           className: "sidebar-link",
-          children: "Teacher"
+          children: "Teachers"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+          href: "#",
+          className: "sidebar-link",
+          children: "Students"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+          href: "#",
+          className: "sidebar-link",
+          children: "Courses"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+          href: "#",
+          className: "sidebar-link",
+          children: "Reports"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "sidebar-footer",
@@ -8807,7 +8819,7 @@ function Dashboard() {
             children: "Always stay updated in your student portal"
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-          src: C_Ucjy_jj_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+          src: C_SMS_jj_png__WEBPACK_IMPORTED_MODULE_1__["default"],
           alt: "User Avatar",
           className: "avatar"
         })]
@@ -9218,7 +9230,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.mjs");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
-/* harmony import */ var C_Ucjy_NOBG_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NOBG.png */ "./NOBG.png");
+/* harmony import */ var C_SMS_NOBG_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NOBG.png */ "./NOBG.png");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -9275,7 +9287,7 @@ function Login() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "left-section",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-            src: C_Ucjy_NOBG_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+            src: C_SMS_NOBG_png__WEBPACK_IMPORTED_MODULE_3__["default"],
             alt: "Logo",
             className: "login-logo"
           })
@@ -15799,7 +15811,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/NOBG.png?1320b77d8f56865b796e85c1d7349191");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/NOBG.png?ed6a636ce31dc09e5de2b94b608ddebc");
 
 /***/ }),
 

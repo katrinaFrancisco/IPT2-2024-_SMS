@@ -18,7 +18,8 @@ export default function Routers() {
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/dashboard" element={<Dashboard />} /> {/* Add route for Dashboard */}
+                <Route path="/dashboard" element={<Dashboard />} />{" "}
+                {/* Add route for Dashboard */}
             </Routes>
         </Router>
     );
