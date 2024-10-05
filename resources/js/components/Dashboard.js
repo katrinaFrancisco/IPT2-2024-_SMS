@@ -1,12 +1,17 @@
-import React from "react";
+import logo from "C:/Ucjy/NOBG.png";
+import avatar from "C:/Ucjy/jj.png"; // Import the avatar image
 
 export default function Dashboard() {
     return (
         <div className="dashboard">
-            {/* Sidebar */}
             <div className="sidebar">
-                {/* Sidebar header */}
-                <div className="sidebar-header">XXXX</div>
+                <div className="sidebar-header">
+                    <img
+                        src={logo}
+                        alt="School Logo"
+                        className="sidebar-logo"
+                    />
+                </div>
 
                 {/* Divider */}
                 <div className="divider"></div>
@@ -34,32 +39,57 @@ export default function Dashboard() {
 
             {/* Dashboard content */}
             <div className="dashboard-content">
-                <h1>Welcome to your dashboard, XXXX SCHOOL</h1>
-                <p>DASHBOARD SAMPLE</p>
+                {/* Welcome section with avatar */}
+                <div className="welcome-metric">
+                    <div className="welcome-text">
+                        <h2>WELCOME TO PINNACLE NEXUS UNIVERSITY</h2>
+                        <p>Always stay updated in your student portal</p>
+                    </div>
+                    <img src={avatar} alt="User Avatar" className="avatar" />
+                </div>
 
-                {/* Dashboard actions */}
-                <div className="dashboard-actions">
-                    <div className="action-item">
-                        <h3>Add other admins</h3>
-                        <p>
-                            Create rich course content and coaching products for
-                            your students.
-                        </p>
+                {/* Dashboard metrics */}
+                <div className="metrics-section">
+                    <div className="metric-item">
+                        <h3>$10,000</h3>
+                        <p>Total Payable</p>
                     </div>
-                    <div className="action-item">
-                        <h3>Add classes</h3>
-                        <p>
-                            Create rich course content and coaching products for
-                            your students.
-                        </p>
+                    <div className="metric-item">
+                        <h3>$5,000</h3>
+                        <p>Total Paid</p>
                     </div>
-                    <div className="action-item">
-                        <h3>Add students</h3>
-                        <p>
-                            Create rich course content and coaching products for
-                            your students.
-                        </p>
+                    <div className="metric-item">
+                        <h3>$300</h3>
+                        <p>Others</p>
                     </div>
+                </div>
+
+                {/* Enrolled Courses */}
+                <div className="courses-section">
+                    <h3>Enrolled Courses</h3>
+                    <div className="course-item">
+                        <h4>Object Oriented Programming</h4>
+                        <button>View</button>
+                    </div>
+                    <div className="course-item">
+                        <h4>Fundamentals of Database Systems</h4>
+                        <button>View</button>
+                    </div>
+                </div>
+
+                {/* Course Instructors */}
+                <div className="instructors-section">
+                    <h3>Course Instructors</h3>
+                    <ul>
+                        <li>Instructor 1</li>
+                        <li>Instructor 2</li>
+                    </ul>
+                </div>
+
+                {/* Daily Notice */}
+                <div className="daily-notice-section">
+                    <h3>Daily Notice</h3>
+                    <p>Exam schedule and important announcements</p>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 /* Home Page Styling */
 .home {
     height: 100vh;
-    background-image: url("C:/uryel/backg1.png");
+    background-image: url("C:/Ucjy/backg1.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -20,7 +20,12 @@
     display: flex;
     justify-content: flex-end; /* Keep nav items on the right */
     padding: 20px 40px; /* Padding for spacing */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.5
+    ); /* Semi-transparent black background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
     z-index: 1000; /* Stay above other elements */
 }

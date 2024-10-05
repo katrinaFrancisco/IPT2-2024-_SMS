@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import NavList from "./Navlist";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom";
+// Import your logo image
+import logo from "C:/Ucjy/NOBG.png";
 
 export default function Login() {
     const [username, setUsername] = useState("");
@@ -16,9 +18,8 @@ export default function Login() {
             setError("Please fill in all fields");
             return;
         }
-        // Here you would typically handle login logic, e.g., API call
+        // Handle login logic, e.g., API call
         console.log("Logging in:", { username, password });
-        // Clear fields after submission
         setUsername("");
         setPassword("");
         setError("");
@@ -30,7 +31,8 @@ export default function Login() {
             <div className="login-container">
                 <div className="form-card">
                     <div className="left-section">
-                        {/* Left section can be used for branding or a welcome message */}
+                        {/* Logo */}
+                        <img src={logo} alt="Logo" className="login-logo" />
                     </div>
 
                     <div className="right-section">
@@ -40,7 +42,9 @@ export default function Login() {
                                 <input
                                     type="text"
                                     value={username}
-                                    onChange={(e) => setUsername(e.target.value)}
+                                    onChange={(e) =>
+                                        setUsername(e.target.value)
+                                    }
                                     placeholder="Username"
                                     required
                                     aria-label="Username" // Accessibility
@@ -50,21 +54,34 @@ export default function Login() {
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
                                     placeholder="Password"
                                     required
                                     aria-label="Password" // Accessibility
                                 />
                                 <span
                                     className="eye-icon"
-                                    onClick={() => setShowPassword(!showPassword)}
+                                    onClick={() =>
+                                        setShowPassword(!showPassword)
+                                    }
                                     role="button"
                                     tabIndex={0}
                                     onKeyDown={(e) =>
-                                        e.key === "Enter" && setShowPassword(!showPassword)
+                                        e.key === "Enter" &&
+                                        setShowPassword(!showPassword)
                                     }
-                                    aria-label={showPassword ? "Hide password" : "Show password"} // Accessibility
-                                    title={showPassword ? "Hide password" : "Show password"} // Tooltip for better UX
+                                    aria-label={
+                                        showPassword
+                                            ? "Hide password"
+                                            : "Show password"
+                                    } // Accessibility
+                                    title={
+                                        showPassword
+                                            ? "Hide password"
+                                            : "Show password"
+                                    } // Tooltip for better UX
                                 >
                                     <FontAwesomeIcon
                                         icon={showPassword ? faEyeSlash : faEye}
@@ -72,16 +89,18 @@ export default function Login() {
                                 </span>
                             </div>
 
-                            {error && <div className="error-message">{error}</div>}
+                            {error && (
+                                <div className="error-message">{error}</div>
+                            )}
 
                             <button type="submit" className="login-button">
-                                Login 
+                                Login
                             </button>
                         </form>
 
                         <div className="signup-link">
                             <span>Don't have an account? </span>
-                            <Link to="/signup">Sign Up Free!</Link> {/* Link to Signup */}
+                            <Link to="/signup">Sign Up Free</Link>
                         </div>
                     </div>
                 </div>
@@ -89,4 +108,3 @@ export default function Login() {
         </div>
     );
 }
-

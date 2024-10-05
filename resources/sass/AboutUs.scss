@@ -1,132 +1,132 @@
 .about-us-page {
-  height: 100vh;
-  background-image: url("C:/uryel/backg2.png"); /* Update the background image path */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Space between sections */
-  color: #333;
+    height: 100vh;
+    background-image: url("C:/Ucjy/backg2.png"); /* Update the background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between sections */
+    color: #333;
 }
 
 /* Navbar Container */
 .navbar {
-  width: 100%; /* Full width */
-  display: flex;
-  justify-content: flex-end; /* Keeps the navbar items on the right */
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: flex-end; /* Keeps the navbar items on the right */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation List (Links) */
 .nav-list {
-  display: flex; /* Make links align horizontally */
-  gap: 20px; /* Space between the links */
-  padding-right: 80px; /* Adds more padding to the right */
+    display: flex; /* Make links align horizontally */
+    gap: 20px; /* Space between the links */
+    padding-right: 80px; /* Adds more padding to the right */
 }
 
 /* Navigation List Links */
 .nav-list a {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #ffffff; /* White text */
-  font-size: 16px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  background-color: transparent;
-  border: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    border: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hover Effect for Links */
 .nav-list a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #dcdcdc;
-  border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #dcdcdc;
+    border-radius: 4px;
 }
 
 /* Hero Section */
 .hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px; /* Adjusted padding for better centering */
-  margin-top: 100px; /* Add margin to push the section down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Adjusted padding for better centering */
+    margin-top: 100px; /* Add margin to push the section down */
 }
 
 .hero-section h1 {
-  font-size: 60px;
-  font-weight: bold;
-  color: #ff6b00;
-  font-family: Arial, sans-serif;
-  animation: moveText 3s linear infinite;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff6b00;
+    font-family: Arial, sans-serif;
+    animation: moveText 3s linear infinite;
 }
 
 /* Intro Section */
 .intro-section {
-  display: flex; /* Added to use flexbox for centering */
-  flex-direction: column; /* Arrange children in a column */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  margin: 50px 60px; /* Add vertical margin to move it down */
+    display: flex; /* Added to use flexbox for centering */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 50px 60px; /* Add vertical margin to move it down */
 }
 
 .intro-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #333;
-  font-family: Arial, sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
 
 .intro-section p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
 }
 
 /* Stats Section */
 .stats-section {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-  width: 100%; /* Ensure stats section takes full width */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    width: 100%; /* Ensure stats section takes full width */
 }
 
 .stat-item {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .stat-item h3 {
-  font-size: 32px;
-  color: #ff6b00;
-  font-weight: bold;
-  margin-bottom: 10px;
+    font-size: 32px;
+    color: #ff6b00;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .stat-item p {
-  font-size: 16px;
-  color: #333;
+    font-size: 16px;
+    color: #333;
 }
 
 /* Keyframe Animation */
 @keyframes moveText {
-  0% {
-      transform: translateX(0);
-  }
-  50% {
-      transform: translateX(10px);
-  }
-  100% {
-      transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }

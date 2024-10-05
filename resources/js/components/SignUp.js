@@ -12,7 +12,13 @@ export default function SignUp() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!firstName || !lastName || !email || !password || !confirmPassword) {
+        if (
+            !firstName ||
+            !lastName ||
+            !email ||
+            !password ||
+            !confirmPassword
+        ) {
             setError("Please fill in all fields");
             return;
         }
@@ -30,7 +36,7 @@ export default function SignUp() {
         setEmail("");
         setPassword("");
         setConfirmPassword("");
-        setError("");  // Clear error after successful submission
+        setError(""); // Clear error after successful submission
     };
 
     return (
@@ -79,7 +85,9 @@ export default function SignUp() {
                             <input
                                 type="password"
                                 value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                onChange={(e) =>
+                                    setConfirmPassword(e.target.value)
+                                }
                                 placeholder="Confirm Password"
                                 required
                             />

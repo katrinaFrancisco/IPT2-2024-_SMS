@@ -1,8 +1,8 @@
 .login {
     height: 100vh;
     background-color: #f5f5f5;
-    background-image: url('C:/uryel/login.png'); // Use the correct path for the background image
-    background-size: cover; // Make sure the background image covers the entire container
+    background-image: url("C:/Ucjy/login.png");
+    background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -24,9 +24,8 @@
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 
         .left-section {
-            background-color: #FF8A00;
-            color: white;
-            width: 55%; /* Make the left section bigger */
+            background-color: #ff9c08;
+            width: 55%;
             border-top-left-radius: 12px;
             border-bottom-left-radius: 12px;
             display: flex;
@@ -34,10 +33,16 @@
             justify-content: center;
             align-items: center;
             padding: 40px;
+
+            .login-logo {
+                width: 140%;
+                height: auto;
+                max-height: 350px;
+            }
         }
 
         .right-section {
-            width: 45%; /* Adjust to make the right section smaller */
+            width: 45%;
             padding: 40px;
             display: flex;
             flex-direction: column;
@@ -82,7 +87,7 @@
             .login-button {
                 width: 100%;
                 padding: 10px;
-                background-color: #3498db;
+                background-color: #ff9c08;
                 color: white;
                 border: none;
                 border-radius: 4px;
@@ -93,9 +98,16 @@
             .signup-link {
                 margin-top: 20px;
                 font-size: 14px;
+
+                a {
+                    text-decoration: none; /* Removes underline from the link */
+                    color: #3498db; /* You can also adjust the color */
+                }
+
+                a:hover {
+                    text-decoration: underline; /* Optional: adds underline on hover for better UX */
+                }
             }
         }
     }
 }
-
-
