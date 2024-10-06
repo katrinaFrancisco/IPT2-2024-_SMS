@@ -1,0 +1,115 @@
+/* TeacherList main container */
+.teacher-list {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Light background for the content area */
+}
+
+/* Content area */
+.teacher-list-content {
+    margin-left: 250px; /* Same width as sidebar */
+    padding: 40px;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-y: auto; /* Enable scrolling for long content */
+}
+
+/* Welcome metric section */
+.welcome-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.welcome-text h2 {
+    font-size: 2rem;
+    color: #14005e;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Teacher table section */
+.teacher-table {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header section */
+.teacher-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Add teacher button */
+.add-teacher-btn {
+    background-color: #344955;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-teacher-btn:hover {
+    background-color: #f9aa33;
+}
+
+/* Search bar */
+.search-bar {
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Teacher table styles */
+.teacher-table-main {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.teacher-table-main th,
+.teacher-table-main td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.teacher-table-main th {
+    background-color: #f9aa33; /* Similar accent color */
+    color: white;
+    font-size: 1.2rem;
+}
+
+.teacher-table-main td {
+    font-size: 1rem;
+    color: #333;
+}
+
+.teacher-table-main tr:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}
+
+/* Optional: Styling for responsive design */
+@media (max-width: 768px) {
+    .teacher-list-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

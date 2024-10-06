@@ -1,50 +1,13 @@
-import logo from "C:/SMS/NOBG.png";
+import React from "react";
+import "./Dashboard"; // Make sure to import the CSS file
 import avatar from "C:/SMS/jj.png"; // Import the avatar image
+import SidebarList from "./Sidebar"; // Import the SidebarList component
 
 export default function Dashboard() {
     return (
         <div className="dashboard">
-            <div className="sidebar">
-                <div className="sidebar-header">
-                    <img
-                        src={logo}
-                        alt="School Logo"
-                        className="sidebar-logo"
-                    />
-                </div>
-
-                {/* Divider */}
-                <div className="divider"></div>
-
-                {/* Sidebar links */}
-                <div className="sidebar-links">
-                    <a href="#" className="sidebar-link">
-                        Dashboard
-                    </a>
-                    <a href="#" className="sidebar-link">
-                        Profile
-                    </a>
-                    <a href="#" className="sidebar-link">
-                        Teachers
-                    </a>
-                    <a href="#" className="sidebar-link">
-                        Students
-                    </a>
-                    <a href="#" className="sidebar-link">
-                        Courses
-                    </a>
-                    <a href="#" className="sidebar-link">
-                        Reports
-                    </a>
-                </div>
-
-                {/* Settings link at the bottom */}
-                <div className="sidebar-footer">
-                    <a href="#" className="settings-link">
-                        Settings
-                    </a>
-                </div>
-            </div>
+            {/* Sidebar component */}
+            <SidebarList />
 
             {/* Dashboard content */}
             <div className="dashboard-content">

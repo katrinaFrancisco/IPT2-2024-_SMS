@@ -11969,7 +11969,7 @@ textarea.form-control-lg {
 /* Home Page Styling */
 .home {
   height: 100vh;
-  background-image: url("https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/461204377_10115852257979731_20136418769041878_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGUHBA8O57MHH4dyUHuWwM7zEC92JsNoELMQL3Ymw2gQqJ5FYi820htvUGcvcl-DxQm3SkuuINmMtNmIZoIX3OV&_nc_ohc=ogT4nXsyGN4Q7kNvgGgKZlB&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=ABTG7dZogWqHgtjTBWic37D&oh=00_AYA_hSwCtklbGKtky-blvRc2BYqPs81jN0q3ABmNYNkPmg&oe=6706E2AA");
+  background-image: url("https://pbs.twimg.com/profile_images/434105797547532290/FUwt8uN0_400x400.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12697,4 +12697,414 @@ body {
 .dashboard .dashboard-content .daily-notice-section p {
   font-size: 1.2rem;
   color: #777;
+}
+
+.student-list {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #333; /* Same background as the dashboard */
+}
+.student-list .sidebar {
+  width: 250px;
+  background-color: #ff9c08; /* Same as the dashboard sidebar */
+  padding: 20px 0;
+  position: fixed; /* Fix the sidebar in place */
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.student-list .sidebar .sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.student-list .sidebar .sidebar-header .sidebar-logo {
+  width: 180px; /* Match the logo size with the dashboard */
+  height: auto;
+  margin-bottom: 10px;
+}
+.student-list .sidebar .divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 20px auto;
+}
+.student-list .sidebar .sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.student-list .sidebar .sidebar-links .sidebar-link {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.student-list .sidebar .sidebar-links .sidebar-link:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Same hover effect */
+}
+.student-list .sidebar .sidebar-links .sidebar-link.active {
+  background-color: rgba(0, 0, 0, 0.3); /* Active state */
+}
+.student-list .sidebar .sidebar-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+.student-list .sidebar .sidebar-footer .settings-link {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.student-list .sidebar .sidebar-footer .settings-link:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.student-list .student-list-content {
+  margin-left: 250px; /* Same margin as in the dashboard */
+  padding: 40px;
+  flex-grow: 1;
+  background-color: #f4f4f4; /* Light background similar to dashboard content */
+  color: #333;
+}
+.student-list .student-list-content .welcome-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+.student-list .student-list-content .welcome-metric .welcome-text {
+  flex: 1;
+  text-align: center;
+}
+.student-list .student-list-content .welcome-metric .welcome-text h2, .student-list .student-list-content .welcome-metric .welcome-text .h2 {
+  font-size: 2rem;
+  color: #14005e;
+  margin-bottom: 10px;
+}
+.student-list .student-list-content .welcome-metric .welcome-text p {
+  font-size: 1.2rem;
+  color: #777;
+}
+.student-list .student-list-content .student-table {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.student-list .student-list-content .student-table .student-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.student-list .student-list-content .student-table .student-table-header .add-student-btn {
+  background-color: #344955;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.student-list .student-list-content .student-table .student-table-header .add-student-btn:hover {
+  background-color: #f9aa33;
+}
+.student-list .student-list-content .student-table .student-table-header .search-bar {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.student-list .student-list-content .student-table .student-table-main {
+  width: 100%;
+  border-collapse: collapse;
+}
+.student-list .student-list-content .student-table .student-table-main th,
+.student-list .student-list-content .student-table .student-table-main td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.student-list .student-list-content .student-table .student-table-main th {
+  background-color: #f9aa33; /* Similar accent color */
+  color: white;
+  font-size: 1.2rem;
+}
+.student-list .student-list-content .student-table .student-table-main td {
+  font-size: 1rem;
+  color: #333;
+}
+.student-list .student-list-content .student-table .student-table-main tr:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}
+
+/* TeacherList main container */
+.teacher-list {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Light background for the content area */
+}
+
+/* Content area */
+.teacher-list-content {
+  margin-left: 250px; /* Same width as sidebar */
+  padding: 40px;
+  flex-grow: 1;
+  background-color: #f4f4f4;
+  color: #333;
+  overflow-y: auto; /* Enable scrolling for long content */
+}
+
+/* Welcome metric section */
+.welcome-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.welcome-text h2, .welcome-text .h2 {
+  font-size: 2rem;
+  color: #14005e;
+  margin-bottom: 10px;
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Teacher table section */
+.teacher-table {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header section */
+.teacher-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Add teacher button */
+.add-teacher-btn {
+  background-color: #344955;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-teacher-btn:hover {
+  background-color: #f9aa33;
+}
+
+/* Search bar */
+.search-bar {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Teacher table styles */
+.teacher-table-main {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.teacher-table-main th,
+.teacher-table-main td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.teacher-table-main th {
+  background-color: #f9aa33; /* Similar accent color */
+  color: white;
+  font-size: 1.2rem;
+}
+
+.teacher-table-main td {
+  font-size: 1rem;
+  color: #333;
+}
+
+.teacher-table-main tr:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}
+
+/* Optional: Styling for responsive design */
+@media (max-width: 768px) {
+  .teacher-list-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+/* Sidebar styles */
+.sidebar {
+  width: 250px;
+  background-color: #ff9c08; /* Adjust as needed */
+  padding: 20px 0;
+  position: fixed;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.sidebar-logo {
+  width: 180px; /* Adjust the logo size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 20px auto;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: inherit; /* Inherit the color for links */
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Hover effect */
+}
+
+.sidebar-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* For the settings link at the bottom */
+.settings-link {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.settings-link:hover {
+  background-color: rgba(0, 0, 0, 0.3); /* Hover effect */
+}
+
+/* AddTeacherForm specific styles */
+.add-teacher-form {
+  background-color: #fff;
+  padding: 40px;
+  margin: 0 auto;
+  width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-teacher-form h2, .add-teacher-form .h2 {
+  color: #14005e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-teacher-form form div {
+  margin-bottom: 20px;
+}
+
+.add-teacher-form label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.add-teacher-form input[type=text],
+.add-teacher-form input[type=email],
+.add-teacher-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.add-teacher-form button[type=submit],
+.add-teacher-form .dashboard-btn {
+  background-color: #344955;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px; /* Add some space between buttons */
+}
+
+.add-teacher-form button[type=submit]:hover,
+.add-teacher-form .dashboard-btn:hover {
+  background-color: #f9aa33;
+}
+
+/* Optional: Styling for responsive design */
+@media (max-width: 768px) {
+  .add-teacher-form {
+    width: 100%;
+    padding: 20px;
+  }
 }

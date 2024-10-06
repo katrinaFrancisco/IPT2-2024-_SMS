@@ -7,7 +7,11 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Login from "./login";
 import SignUp from "./SignUp";
-import Dashboard from "./Dashboard"; // Import the Dashboard component
+import Dashboard from "./Dashboard";
+import StudentList from "./StudentList";
+import TeacherList from "./TeacherList";
+import SidebarList from "./Sidebar";
+import AddTeacherForm from "./AddTeacherForm"; // Import the AddTeacherForm component
 
 export default function Routers() {
     return (
@@ -18,8 +22,11 @@ export default function Routers() {
                 <Route path="/contact-us" element={<ContactUs />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/dashboard" element={<Dashboard />} />{" "}
-                {/* Add route for Dashboard */}
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/students" element={<StudentList />} />
+                <Route path="/teachers" element={<TeacherList />} />
+                <Route path="/add-teacher" element={<AddTeacherForm />} />{" "}
+                {/* New Route for AddTeacherForm */}
             </Routes>
         </Router>
     );
