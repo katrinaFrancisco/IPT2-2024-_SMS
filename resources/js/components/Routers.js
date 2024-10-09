@@ -7,11 +7,9 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Login from "./login";
 import SignUp from "./SignUp";
-import Dashboard from "./Dashboard";
-import StudentList from "./StudentList";
-import TeacherList from "./TeacherList";
-import SidebarList from "./Sidebar";
-import AddTeacherForm from "./AddTeacherForm"; // Import the AddTeacherForm component
+import Dashboard from "./Dashboard"; // Import the Dashboard component
+import StudentList from "./StudentList"; // Import the StudentList component
+import CoursesList from "./CoursesList"; // Import the CoursesList component
 
 export default function Routers() {
     return (
@@ -24,9 +22,7 @@ export default function Routers() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/students" element={<StudentList />} />
-                <Route path="/teachers" element={<TeacherList />} />
-                <Route path="/add-teacher" element={<AddTeacherForm />} />{" "}
-                {/* New Route for AddTeacherForm */}
+                <Route path="/courses" element={<CoursesList />} /> {/* Add Courses route */}
             </Routes>
         </Router>
     );
