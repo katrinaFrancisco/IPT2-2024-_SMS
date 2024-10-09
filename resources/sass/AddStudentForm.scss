@@ -1,0 +1,61 @@
+/* AddStudentForm specific styles */
+.add-student-form {
+    background-color: #fff;
+    padding: 40px;
+    margin: 0 auto;
+    width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-student-form h2 {
+    color: #14005e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-student-form form div {
+    margin-bottom: 20px;
+}
+
+.add-student-form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.add-student-form input[type="text"],
+.add-student-form input[type="email"],
+.add-student-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-student-form button[type="submit"],
+.add-student-form .dashboard-btn {
+    background-color: #344955;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px; /* Add some space between buttons */
+}
+
+.add-student-form button[type="submit"]:hover,
+.add-student-form .dashboard-btn:hover {
+    background-color: #f9aa33;
+}
+
+/* Optional: Styling for responsive design */
+@media (max-width: 768px) {
+    .add-student-form {
+        width: 100%;
+        padding: 20px;
+    }
+}

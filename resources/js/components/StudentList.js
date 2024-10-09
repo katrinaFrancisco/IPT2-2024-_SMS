@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import SidebarList from "./Sidebar";
-import logo from "C:/SMS/NOBG.png";
 
 export default function StudentList() {
+    const navigate = useNavigate();
+
+    const handleAddStudentClick = () => {
+        navigate("/add-student"); // Navigate to AddTeacherForm
+    };
     return (
         <div className="student-list">
             {/* Render the SidebarList component */}
@@ -21,7 +26,12 @@ export default function StudentList() {
                 {/* Student list table */}
                 <div className="student-table">
                     <div className="student-table-header">
-                        <button className="add-student-btn">Add Student</button>
+                        <button
+                            className="add-student-btn"
+                            onClick={handleAddStudentClick}
+                        >
+                            Add Student
+                        </button>
                         <input
                             type="text"
                             placeholder="Search for a student by name or email"
