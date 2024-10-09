@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import SidebarList from "./Sidebar";
 
-export default function TeacherList() {
+export default function TeacherList({ teachers }) {
     const navigate = useNavigate();
 
     const handleAddTeacherClick = () => {
-        navigate("/add-teacher"); // Navigate to AddTeacherForm
+        navigate("/add-teacher");
     };
 
     return (
@@ -46,20 +46,15 @@ export default function TeacherList() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Jane Doe</td>
-                                <td>001</td>
-                                <td>doe.jane@nexus.edu.ph</td>
-                                <td>Mathematics</td>
-                                <td>Female</td>
-                            </tr>
-                            <tr>
-                                <td>John Smith</td>
-                                <td>002</td>
-                                <td>smith.john@nexus.edu.ph</td>
-                                <td>Physics</td>
-                                <td>Male</td>
-                            </tr>
+                            {teachers.map((teacher, index) => (
+                                <tr key={index}>
+                                    <td>{teacher.fullName}</td>
+                                    <td>{teacher.employeeID}</td>
+                                    <td>{teacher.emailAddress}</td>
+                                    <td>{teacher.subject}</td>
+                                    <td>{teacher.gender}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>

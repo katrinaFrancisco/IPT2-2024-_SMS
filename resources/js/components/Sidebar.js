@@ -8,7 +8,7 @@ export default function SidebarList() {
         <div className="sidebar">
             <div className="sidebar-header">
                 <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPC2dT8C7zSRPaAEds5C2eNXB6HvaTCM2Hnw&s" // Adjust the path if necessary
+                    src="https://pbs.twimg.com/media/GZb8H5LbsAAaDqk?format=png&name=small" // Adjust the path if necessary
                     alt="School Logo"
                     className="sidebar-logo"
                 />
@@ -65,16 +65,6 @@ export default function SidebarList() {
                         }
                     >
                         Courses
-                    </Link>
-                </div>
-                <div className="nav-item">
-                    <Link
-                        to="/add-teacher"
-                        className={
-                            location.pathname === "/add-teacher" ? "active" : ""
-                        }
-                    >
-                        Add Teacher
                     </Link>
                 </div>
             </div>
