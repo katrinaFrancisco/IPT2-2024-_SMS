@@ -8,16 +8,23 @@
 @import "~bootstrap/scss/bootstrap";
 
 @import "Home.scss";
-@import "ContactUs.scss";
 
 @import "AboutUs.scss";
 
-@import "Login.scss";
-@import "SignUp.scss";
+@import "ContactUs.scss";
 
 @import "Dashboard.scss";
 
+@import "Login.scss";
+
+@import "sidebar.scss";
+
+@import "SignUp.scss";
+
 @import "StudentList.scss";
+
 @import "TeacherList.scss";
-@import "Sidebar.scss";
+
 @import "AddTeacherForm.scss";
+
+@import "Profile.scss";

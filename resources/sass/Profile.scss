@@ -1,0 +1,149 @@
+.profile-page {
+    display: flex;
+    background-color: #f7f9fc;
+}
+
+.profile-content {
+    margin-left: 250px; // Adjust based on sidebar width
+    padding: 30px;
+    width: 100%;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.profile-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.horizontal-card {
+    flex: 1;
+}
+
+.account-card,
+.bills-card {
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    p,
+    ul {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+}
+
+.block-account,
+.unblock-account {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &:hover {
+        background-color: #ff3333;
+    }
+}
+
+.unblock-account {
+    background-color: #4caf50;
+
+    &:hover {
+        background-color: #45a049;
+    }
+}
+
+.bills-card ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.bill-status {
+    font-weight: bold;
+    &.paid {
+        color: #4caf50;
+    }
+    &.unpaid {
+        color: #ff4d4d;
+    }
+}
+.profile-logo {
+    width: 350px; // Set the width of the logo
+    height: auto; // Maintain aspect ratio
+    border-radius: 50%; // Circular logo (optional)
+    margin-bottom: 20px; // Space between logo and text
+}
+
+.vertical-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center items
+    text-align: center; // Center text
+}
+
+h3 {
+    margin-bottom: 10px; // Space below the name
+}
+.account-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.account-field {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 10px); // Two-column layout
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    background-color: #f0f0f0; // Light background to mimic disabled fields
+    border: 1px solid #ccc; // Light border to mimic form fields
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    pointer-events: none; // Disable interactions
+}

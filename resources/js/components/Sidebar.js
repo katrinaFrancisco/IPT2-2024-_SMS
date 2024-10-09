@@ -2,16 +2,14 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function SidebarList() {
-    const location = useLocation(); // Get the current path
+    const location = useLocation();
+    const logo =
+        "https://pbs.twimg.com/media/GZcCk5zbwAA_F0m?format=png&name=small"; // Logo URL
 
     return (
         <div className="sidebar">
             <div className="sidebar-header">
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPC2dT8C7zSRPaAEds5C2eNXB6HvaTCM2Hnw&s" // Adjust the path if necessary
-                    alt="School Logo"
-                    className="sidebar-logo"
-                />
+                <img src={logo} alt="School Logo" className="sidebar-logo" />
             </div>
 
             <div className="divider"></div>
@@ -65,16 +63,6 @@ export default function SidebarList() {
                         }
                     >
                         Courses
-                    </Link>
-                </div>
-                <div className="nav-item">
-                    <Link
-                        to="/add-teacher"
-                        className={
-                            location.pathname === "/add-teacher" ? "active" : ""
-                        }
-                    >
-                        Add Teacher
                     </Link>
                 </div>
             </div>

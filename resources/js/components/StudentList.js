@@ -1,6 +1,5 @@
 import React from "react";
 import SidebarList from "./Sidebar";
-import logo from "C:/SMS/NOBG.png";
 
 export default function StudentList() {
     return (

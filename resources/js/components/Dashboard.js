@@ -1,6 +1,5 @@
 import React from "react";
-import "./Dashboard"; // Make sure to import the CSS file
-import avatar from "C:/SMS/jj.png"; // Import the avatar image
+import avatar from "C:/pry/jj.png"; // Import the avatar image
 import SidebarList from "./Sidebar"; // Import the SidebarList component
 
 export default function Dashboard() {

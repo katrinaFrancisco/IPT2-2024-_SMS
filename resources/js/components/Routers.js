@@ -5,13 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
-import Login from "./login";
+import Login from "./Login";
 import SignUp from "./SignUp";
 import Dashboard from "./Dashboard";
 import StudentList from "./StudentList";
 import TeacherList from "./TeacherList";
 import SidebarList from "./Sidebar";
-import AddTeacherForm from "./AddTeacherForm"; // Import the AddTeacherForm component
+import AddTeacherForm from "./AddTeacherForm";
+import Profile from "./Profile"; // Import the Profile component
 
 export default function Routers() {
     return (
@@ -25,8 +26,9 @@ export default function Routers() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/students" element={<StudentList />} />
                 <Route path="/teachers" element={<TeacherList />} />
-                <Route path="/add-teacher" element={<AddTeacherForm />} />{" "}
-                {/* New Route for AddTeacherForm */}
+                <Route path="/add-teacher" element={<AddTeacherForm />} />
+                <Route path="/profile" element={<Profile />} />{" "}
+                {/* New Route for Profile */}
             </Routes>
         </Router>
     );

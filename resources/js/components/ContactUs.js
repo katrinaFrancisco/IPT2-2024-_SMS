@@ -18,7 +18,9 @@ export default function ContactUs() {
                     <div className="stat-item">
                         <h3>Email:</h3>
                         <p>
-                            <a href="mailto:info@ourschool.edu">xxx@school.edu</a>
+                            <a href="mailto:info@ourschool.edu">
+                                xxx@school.edu
+                            </a>
                         </p>
                     </div>
                     <div className="stat-item">
