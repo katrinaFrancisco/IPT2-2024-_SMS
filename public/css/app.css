@@ -11969,7 +11969,7 @@ textarea.form-control-lg {
 /* Home Page Styling */
 .home {
   height: 100vh;
-  background-image: url("https://pbs.twimg.com/profile_images/434105797547532290/FUwt8uN0_400x400.jpeg");
+  background-image: url(/images/backg1.png?5850ae57a2a6f488e3b0c5f8d3413a90);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -12353,7 +12353,6 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .login .login-container {
@@ -12701,15 +12700,15 @@ body {
 
 .student-list {
   display: flex;
-  height: 100vh; /* Full viewport height */
-  background-color: #333; /* Same background as the dashboard */
+  height: 100vh;
+  background-color: #333;
 }
 .student-list .sidebar {
   width: 250px;
-  background-color: #ff9c08; /* Same as the dashboard sidebar */
+  background-color: #ff9c08;
   padding: 20px 0;
-  position: fixed; /* Fix the sidebar in place */
-  height: 100vh; /* Full height of the viewport */
+  position: fixed;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12719,10 +12718,10 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-  color: #ffffff;
+  color: white;
 }
 .student-list .sidebar .sidebar-header .sidebar-logo {
-  width: 180px; /* Match the logo size with the dashboard */
+  width: 180px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -12739,18 +12738,15 @@ body {
 }
 .student-list .sidebar .sidebar-links .sidebar-link {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: white;
   text-align: center;
   text-decoration: none;
   padding: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.student-list .sidebar .sidebar-links .sidebar-link:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Same hover effect */
-}
-.student-list .sidebar .sidebar-links .sidebar-link.active {
-  background-color: rgba(0, 0, 0, 0.3); /* Active state */
+.student-list .sidebar .sidebar-links .sidebar-link:hover, .student-list .sidebar .sidebar-links .sidebar-link.active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .student-list .sidebar .sidebar-footer {
   display: flex;
@@ -12759,7 +12755,7 @@ body {
 }
 .student-list .sidebar .sidebar-footer .settings-link {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: white;
   text-align: center;
   text-decoration: none;
   padding: 10px 0;
@@ -12770,17 +12766,17 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .student-list .student-list-content {
-  margin-left: 250px; /* Same margin as in the dashboard */
+  margin-left: 250px;
   padding: 40px;
   flex-grow: 1;
-  background-color: #f4f4f4; /* Light background similar to dashboard content */
+  background-color: #f4f4f4;
   color: #333;
 }
 .student-list .student-list-content .welcome-metric {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
+  padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -12841,7 +12837,7 @@ body {
   text-align: left;
 }
 .student-list .student-list-content .student-table .student-table-main th {
-  background-color: #f9aa33; /* Similar accent color */
+  background-color: #f9aa33;
   color: white;
   font-size: 1.2rem;
 }
@@ -12850,9 +12846,27 @@ body {
   color: #333;
 }
 .student-list .student-list-content .student-table .student-table-main tr:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Add responsive design for mobile/tablets */
+@media (max-width: 768px) {
+  .student-list {
+    flex-direction: column;
+  }
+  .student-list .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .student-list .student-list-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .student-table .search-bar {
+    width: 100%;
+  }
+}
 /* TeacherList main container */
 .teacher-list {
   display: flex;
@@ -13001,25 +13015,37 @@ body {
   margin: 20px auto;
 }
 
+/* New styles for section headers */
+.section-header {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 15px 0 5px 20px; /* Space from top and side */
+}
+
 .sidebar-links {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 20px; /* Add padding to align items */
 }
 
 .nav-item {
   font-size: 1.2rem;
   color: #ffffff;
-  text-align: center;
+  text-align: left; /* Align text to the left for better readability */
   text-decoration: none;
   padding: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
-.nav-item a {
+a {
   text-decoration: none;
   color: inherit; /* Inherit the color for links */
+  display: block; /* Make the link fill the nav-item */
+  width: 100%; /* Ensure the link takes full width */
+  padding: 10px; /* Add padding for better click area */
+  border-radius: 5px; /* Add rounded corners for a softer look */
 }
 
 .nav-item:hover {
@@ -13047,64 +13073,206 @@ body {
   background-color: rgba(0, 0, 0, 0.3); /* Hover effect */
 }
 
-/* AddTeacherForm specific styles */
-.add-teacher-form {
-  background-color: #fff;
-  padding: 40px;
-  margin: 0 auto;
-  width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.reports-container {
+  display: flex;
+  height: 100vh;
+  background-color: #333;
 }
-
-.add-teacher-form h2, .add-teacher-form .h2 {
-  color: #14005e;
-  margin-bottom: 20px;
-  text-align: center;
+.reports-container .sidebar {
+  width: 250px;
+  background-color: #ff9c08;
+  padding: 20px 0;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
-.add-teacher-form form div {
-  margin-bottom: 20px;
+.reports-container .sidebar .sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
 }
-
-.add-teacher-form label {
-  display: block;
-  font-weight: bold;
-  color: #333;
+.reports-container .sidebar .sidebar-header .sidebar-logo {
+  width: 180px;
+  height: auto;
   margin-bottom: 10px;
 }
-
-.add-teacher-form input[type=text],
-.add-teacher-form input[type=email],
-.add-teacher-form select {
+.reports-container .sidebar .divider {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 20px auto;
 }
-
-.add-teacher-form button[type=submit],
-.add-teacher-form .dashboard-btn {
-  background-color: #344955;
+.reports-container .sidebar .sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.reports-container .sidebar .sidebar-links .sidebar-link {
+  font-size: 1.2rem;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  margin-top: 20px; /* Add some space between buttons */
 }
-
-.add-teacher-form button[type=submit]:hover,
-.add-teacher-form .dashboard-btn:hover {
+.reports-container .sidebar .sidebar-links .sidebar-link:hover, .reports-container .sidebar .sidebar-links .sidebar-link.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.reports-container .sidebar .sidebar-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+.reports-container .sidebar .sidebar-footer .settings-link {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.reports-container .sidebar .sidebar-footer .settings-link:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.reports-container .report-content-container {
+  margin-left: 250px;
+  padding: 40px;
+  flex-grow: 15;
+  background-color: #f4f4f4;
+  color: #000000;
+}
+.reports-container .report-content-container .report-header {
+  padding: 20px;
+  background-color: #ff9c08;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+.reports-container .report-content-container .report-header h2, .reports-container .report-content-container .report-header .h2 {
+  font-size: 4rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.reports-container .report-content-container .report-chart {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.reports-container .report-content-container .report-chart canvas {
+  max-width: 100%;
+}
+.reports-container .report-content-container .download-reports-section {
+  margin-top: 40px;
+}
+.reports-container .report-content-container .download-reports-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+.reports-container .report-content-container .download-reports-section ul li {
+  margin-bottom: 15px;
+}
+.reports-container .report-content-container .download-reports-section ul li button {
+  margin-left: 20px;
+  padding: 8px 16px;
+  background-color: #ff9c08;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.reports-container .report-content-container .download-reports-section ul li button:hover {
   background-color: #f9aa33;
 }
 
-/* Optional: Styling for responsive design */
+/* Add responsive design */
 @media (max-width: 768px) {
-  .add-teacher-form {
+  .reports-container {
+    flex-direction: column;
+  }
+  .reports-container .sidebar {
     width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .reports-container .report-content-container {
+    margin-left: 0;
     padding: 20px;
   }
+}
+.add-teacher-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.add-teacher-form h2, .add-teacher-form .h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.add-teacher-form form {
+  display: flex;
+  flex-direction: column;
+}
+.add-teacher-form form div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.add-teacher-form form div label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+.add-teacher-form form div input,
+.add-teacher-form form div select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  transition: border 0.3s ease;
+}
+.add-teacher-form form div input:focus,
+.add-teacher-form form div select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.add-teacher-form form button[type=submit] {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-teacher-form form button[type=submit]:hover {
+  background-color: #0056b3;
+}
+.add-teacher-form .dashboard-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-teacher-form .dashboard-btn:hover {
+  background-color: #218838;
 }

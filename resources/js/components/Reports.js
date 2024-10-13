@@ -1,112 +1,137 @@
 import React, { useState } from "react";
-import SidebarList from "./Sidebar"; // Sidebar component
-import logo from "C:/yan/NOBG.png"; // Replace with your actual path
+import { Line } from "react-chartjs-2";
+import SidebarList from "./Sidebar";
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+} from "chart.js";
+import { students } from "./StudentList";
+import { teachersData } from "./TeacherList";
 
-export default function ReportPage() {
-    const [activeSection, setActiveSection] = useState("view-reports");
+// Register necessary Chart.js components
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+);
 
-    // Function to handle sidebar link clicks
-    const handleSidebarClick = (section) => {
-        setActiveSection(section);
+export default function Reports() {
+    // Define active section state for dynamic sections
+    const [activeSection, setActiveSection] = useState("report");
+
+    // Define year range and calculate data
+    const fullYearRange = [2022, 2023, 2024, 2025, 2026, 2027];
+    const studentEnrollmentCount = students.reduce((acc, student) => {
+        acc[student.yearEnrolled] = (acc[student.yearEnrolled] || 0) + 1;
+        return acc;
+    }, {});
+    const studentCounts = fullYearRange.map(
+        (year) => studentEnrollmentCount[year] || 0
+    );
+    const teacherHiredCount = teachersData.reduce((acc, teacher) => {
+        acc[teacher.yearHired] = (acc[teacher.yearHired] || 0) + 1;
+        return acc;
+    }, {});
+    const teacherCounts = fullYearRange.map(
+        (year) => teacherHiredCount[year] || 0
+    );
+
+    // Chart data and options
+    const data = {
+        labels: fullYearRange,
+        datasets: [
+            {
+                label: "Number of Students",
+                data: studentCounts,
+                fill: false,
+                borderColor: "rgba(75,192,192,1)",
+                tension: 0.1,
+            },
+            {
+                label: "Number of Teachers",
+                data: teacherCounts,
+                fill: false,
+                borderColor: "rgba(192,75,75,1)",
+                tension: 0.1,
+            },
+        ],
+    };
+    const options = {
+        responsive: true,
+        scales: {
+            y: {
+                min: 0,
+                max: 15,
+                title: {
+                    display: true,
+                    text: "Counts",
+                    font: {
+                        size: 18, // Adjust font size
+                        family: "Arial", // Set the font family
+                        weight: "bold",
+                    },
+                },
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: "Year",
+                    font: {
+                        size: 18, // Adjust font size
+                        family: "Arial", // Set the font family
+                        weight: "bold",
+                    },
+                },
+                ticks: {
+                    font: {
+                        size: 17, // Adjust font size for x-axis labels
+                    },
+                },
+            },
+        },
+        plugins: {
+            legend: { position: "top" },
+            title: {
+                display: true,
+                text: "Enrollment and Teacher Hiring Statistics by Year (2022-2027)",
+                font: {
+                    size: 24, // Adjust font size for chart title
+                    family: "Arial", // Set the font family
+                    weight: "bold", // Make the title bold
+                },
+            },
+        },
     };
 
     return (
-        <div className="report-page">
-            {/* Render the SidebarList component */}
-            <SidebarList onClick={handleSidebarClick} />
+        <div className="reports-container">
+            {/* Sidebar component */}
+            <SidebarList />
 
-            {/* Report Page Content */}
-            <div className="report-content">
-                <div className="welcome-metric">
-                    <div className="welcome-text">
-                        <h2>REPORTS</h2>
-                        <p>Manage and view report details</p>
-                    </div>
+            {/* Main content container */}
+            <div className="report-content-container">
+                <div className="report-header">
+                    <h2>Enrollment Reports</h2>
                 </div>
 
-                {/* Dynamic Content Rendering Based on Active Section */}
-                {activeSection === "view-reports" && (
-                    <div>
-                        <h3>View Reports</h3>
-                        <div className="report-table">
-                            <div className="report-table-header">
-                                <input
-                                    type="text"
-                                    placeholder="Search for a report by name or date"
-                                    className="search-bar"
-                                />
-                            </div>
+                {/* Chart */}
+                <div className="report-chart">
+                    <Line data={data} options={options} />
+                </div>
 
-                            <table className="report-table-main">
-                                <thead>
-                                    <tr>
-                                        <th>Report Name</th>
-                                        <th>Generated Date</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Attendance Report</td>
-                                        <td>2024-10-01</td>
-                                        <td>Complete</td>
-                                        <td>
-                                            <button>View</button>{" "}
-                                            <button>Download</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grade Report</td>
-                                        <td>2024-09-15</td>
-                                        <td>Pending</td>
-                                        <td>
-                                            <button>View</button>{" "}
-                                            <button>Download</button>
-                                        </td>
-                                    </tr>
-                                    {/* Add more report rows as needed */}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                )}
-
-                {activeSection === "generate-reports" && (
-                    <div>
-                        <h3>Generate Reports</h3>
-                        <p>
-                            Select the type of report and date range to generate
-                            a new report.
-                        </p>
-                        <form className="generate-report-form">
-                            <label htmlFor="report-type">Report Type:</label>
-                            <select id="report-type" name="report-type">
-                                <option value="attendance">
-                                    Attendance Report
-                                </option>
-                                <option value="grades">Grades Report</option>
-                            </select>
-
-                            <label htmlFor="start-date">Start Date:</label>
-                            <input
-                                type="date"
-                                id="start-date"
-                                name="start-date"
-                            />
-
-                            <label htmlFor="end-date">End Date:</label>
-                            <input type="date" id="end-date" name="end-date" />
-
-                            <button type="submit" className="generate-btn">
-                                Generate Report
-                            </button>
-                        </form>
-                    </div>
-                )}
-
+                {/* Download Section */}
                 {activeSection === "download-reports" && (
-                    <div>
+                    <div className="download-reports-section">
                         <h3>Download Reports</h3>
                         <p>Select a report from the list to download:</p>
                         <ul>

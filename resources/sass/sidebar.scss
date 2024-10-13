@@ -31,25 +31,37 @@
     margin: 20px auto;
 }
 
+/* New styles for section headers */
+.section-header {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 15px 0 5px 20px; /* Space from top and side */
+}
+
 .sidebar-links {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 0 20px; /* Add padding to align items */
 }
 
 .nav-item {
     font-size: 1.2rem;
     color: #ffffff;
-    text-align: center;
+    text-align: left; /* Align text to the left for better readability */
     text-decoration: none;
     padding: 10px 0;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
-.nav-item a {
+a {
     text-decoration: none;
     color: inherit; /* Inherit the color for links */
+    display: block; /* Make the link fill the nav-item */
+    width: 100%; /* Ensure the link takes full width */
+    padding: 10px; /* Add padding for better click area */
+    border-radius: 5px; /* Add rounded corners for a softer look */
 }
 
 .nav-item:hover {

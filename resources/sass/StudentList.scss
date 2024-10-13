@@ -1,14 +1,20 @@
+$primary-color: #ff9c08;
+$secondary-color: #f9aa33;
+$hover-bg: rgba(0, 0, 0, 0.05);
+$sidebar-bg: #344955;
+$sidebar-text-color: white;
+
 .student-list {
     display: flex;
-    height: 100vh; /* Full viewport height */
-    background-color: #333; /* Same background as the dashboard */
+    height: 100vh;
+    background-color: #333;
 
     .sidebar {
         width: 250px;
-        background-color: #ff9c08; /* Same as the dashboard sidebar */
+        background-color: $primary-color;
         padding: 20px 0;
-        position: fixed; /* Fix the sidebar in place */
-        height: 100vh; /* Full height of the viewport */
+        position: fixed;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -18,10 +24,10 @@
             flex-direction: column;
             align-items: center;
             font-size: 1.5rem;
-            color: #ffffff;
+            color: $sidebar-text-color;
 
             .sidebar-logo {
-                width: 180px; /* Match the logo size with the dashboard */
+                width: 180px;
                 height: auto;
                 margin-bottom: 10px;
             }
@@ -41,24 +47,16 @@
 
             .sidebar-link {
                 font-size: 1.2rem;
-                color: #ffffff;
+                color: $sidebar-text-color;
                 text-align: center;
                 text-decoration: none;
                 padding: 10px 0;
                 cursor: pointer;
                 transition: background-color 0.3s ease-in-out;
 
-                &:hover {
-                    background-color: rgba(
-                        0,
-                        0,
-                        0,
-                        0.3
-                    ); /* Same hover effect */
-                }
-
+                &:hover,
                 &.active {
-                    background-color: rgba(0, 0, 0, 0.3); /* Active state */
+                    background-color: rgba(0, 0, 0, 0.3);
                 }
             }
         }
@@ -70,7 +68,7 @@
 
             .settings-link {
                 font-size: 1.2rem;
-                color: #ffffff;
+                color: $sidebar-text-color;
                 text-align: center;
                 text-decoration: none;
                 padding: 10px 0;
@@ -85,17 +83,17 @@
     }
 
     .student-list-content {
-        margin-left: 250px; /* Same margin as in the dashboard */
+        margin-left: 250px;
         padding: 40px;
         flex-grow: 1;
-        background-color: #f4f4f4; /* Light background similar to dashboard content */
+        background-color: #f4f4f4;
         color: #333;
 
         .welcome-metric {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0px;
+            padding: 20px;
             background-color: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -104,6 +102,7 @@
             .welcome-text {
                 flex: 1;
                 text-align: center;
+
                 h2 {
                     font-size: 2rem;
                     color: #14005e;
@@ -130,8 +129,8 @@
                 margin-bottom: 20px;
 
                 .add-student-btn {
-                    background-color: #344955;
-                    color: white;
+                    background-color: $sidebar-bg;
+                    color: $sidebar-text-color;
                     padding: 10px 20px;
                     border: none;
                     border-radius: 5px;
@@ -139,7 +138,7 @@
                     transition: background-color 0.3s ease-in-out;
 
                     &:hover {
-                        background-color: #f9aa33;
+                        background-color: $secondary-color;
                     }
                 }
 
@@ -164,7 +163,7 @@
                 }
 
                 th {
-                    background-color: #f9aa33; /* Similar accent color */
+                    background-color: $secondary-color;
                     color: white;
                     font-size: 1.2rem;
                 }
@@ -175,14 +174,31 @@
                 }
 
                 tr:hover {
-                    background-color: rgba(
-                        0,
-                        0,
-                        0,
-                        0.05
-                    ); /* Light hover effect */
+                    background-color: $hover-bg;
                 }
             }
         }
+    }
+}
+
+/* Add responsive design for mobile/tablets */
+@media (max-width: 768px) {
+    .student-list {
+        flex-direction: column;
+
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .student-list-content {
+            margin-left: 0;
+            padding: 20px;
+        }
+    }
+
+    .student-table .search-bar {
+        width: 100%;
     }
 }

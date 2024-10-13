@@ -77,6 +77,17 @@ export default function SidebarList() {
                         Add Teacher
                     </Link>
                 </div>
+                {/* New Reports Link */}
+                <div className="nav-item">
+                    <Link
+                        to="/reports"
+                        className={
+                            location.pathname === "/reports" ? "active" : ""
+                        }
+                    >
+                        Reports
+                    </Link>
+                </div>
             </div>
 
             <div className="sidebar-footer">

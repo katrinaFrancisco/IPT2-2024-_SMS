@@ -12,6 +12,7 @@ import StudentList from "./StudentList";
 import TeacherList from "./TeacherList";
 import SidebarList from "./Sidebar";
 import AddTeacherForm from "./AddTeacherForm"; // Import the AddTeacherForm component
+import Reports from "./Reports"; // Import the Reports component
 
 export default function Routers() {
     return (
@@ -27,6 +28,8 @@ export default function Routers() {
                 <Route path="/teachers" element={<TeacherList />} />
                 <Route path="/add-teacher" element={<AddTeacherForm />} />{" "}
                 {/* New Route for AddTeacherForm */}
+                <Route path="/reports" element={<Reports />} />
+                {/* New Route for Reports */}
             </Routes>
         </Router>
     );
